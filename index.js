@@ -1,11 +1,7 @@
 const utils = require("./utils");
+const shufflesort = require("./shufflesort").shufflesort;
 
 let data = [2, 1, 3, 5, 9];
-
-const shufflesort = d => {
-  let shuffled = utils.shuffle(d);
-  return shuffled;
-};
 
 const start_shufflesort = () => {
   let count = 0;
