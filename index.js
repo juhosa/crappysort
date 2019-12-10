@@ -1,5 +1,6 @@
 const utils = require("./utils");
 const shufflesort = require("./shufflesort").shufflesort;
+const crappysort = require("./crappysort").crappysort;
 
 let data = [2, 1, 3, 5, 9];
 
@@ -18,4 +19,9 @@ const start_shufflesort = () => {
   );
 };
 
-start_shufflesort();
+const start_crappysort = () => {
+  crappysort(data);
+};
+
+// start_shufflesort();
+start_crappysort();

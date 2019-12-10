@@ -16,5 +16,19 @@ const isSorted = d => {
   return true;
 };
 
+const hot_encode = d => {
+  let max = d.data.reduce((a, b) => Math.max(a, b));
+  let encoded = [];
+
+  for (let i = 0; i < d.data.length; i++) {
+    let tmp = Array(max + 1).fill(0);
+    tmp[d.data[i]] = 1;
+    encoded.push(tmp);
+  }
+
+  return encoded;
+};
+
 module.exports.shuffle = shuffle;
 module.exports.isSorted = isSorted;
+module.exports.hot_encode = hot_encode;
